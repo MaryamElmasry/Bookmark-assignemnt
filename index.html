@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.1/css/all.min.css" integrity="sha512-5Hs3dF2AEPkpNAR7UiOHba+lRSJNeM2ECkwxUIxC1Q/FLycGTbNapWXB4tP889k5T5Ju8fs4b1P5z/iB4nMfSQ==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <!-- <link rel="stylesheet" href="css/all.min.css"> -->
+  
+ 
+    <title>Document</title>
+</head>
+<body>
+
+    
+    <div class="container">
+        <hr>
+    <h2 class="text-center h3"> <i class="fa-solid fa-bookmark "></i> Bookmark your favorite sites <i class="fa-solid fa-bookmark"></i></h2>
+    <form>
+    <label for="Name" class="fw-bolder"> <i class="fa-solid fa-floppy-disk"></i> Site Name </label>
+    <input oninput="nameValidation()" type="text" name="Site Name" id="Name" class="form-control">
+    <p class="d-none alert alert-danger" id="nameMessage">Name must be 3-50 alphanumeric characters</p>
+    <label for="Url" class="fw-bolder"> <i class="fa-solid fa-link"></i> Site URL </label>
+    <input oninput="urlValidation()" type="text" name="Site URL" id="Url" class="form-control">
+    <p class="d-none alert alert-danger" id="urlMessage">Please enter a valid URL (e.g., https://example.com)</p>
+    <br>
+    <button type="button" onclick="getInputValue()">Submit</button>
+
+    <hr>
+
+   </form>
+    </div>
+    <div class="container">
+    <table class="table">
+        <thead>
+          <tr>
+            <th scope="col">Index</th>
+            <th scope="col">Website Name</th>
+            <th scope="col">Visit</th>
+            <th scope="col">Delete</th>
+          </tr>
+        </thead>
+        <tbody id="t-body">
+
+         
+         
+        </tbody>
+      </table>
+
+   </div>
+
+
+    <script src="js/bootstrap.bundle.min.js"></script>
+    <!-- <script src="js/all.min.js"></script> -->
+    <script src="js/index.js"></script>
+</body>
+</html>
